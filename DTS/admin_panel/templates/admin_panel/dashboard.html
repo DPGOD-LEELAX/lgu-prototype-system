@@ -1,0 +1,151 @@
+<!-- admin_panel/templates/admin_panel/dashboard.html -->
+{% extends 'admin_panel/base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    {% include 'admin_panel/nav.html' %}
+
+    <div class="home-content">
+        <!-- Your existing dashboard content -->
+        <div class="overview-boxes">
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Documents</div>
+                    <div class="number">{{ total_documents }}</div>
+                    <div class="indicator">
+                        <i class="bx bx-up-arrow-alt"></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                
+                <i class="bx bx-cart-alt cart"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">New Users</div>
+                    <div class="number">38</div>
+                    <div class="indicator">
+                        <i class="bx bx-up-arrow-alt"></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                <i class="bx bxs-cart-add cart two"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Sales</div>
+                    <div class="number">12,876</div>
+                    <div class="indicator">
+                        <i class="bx bx-up-arrow-alt"></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                <i class="bx bx-cart cart three"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Expenses</div>
+                    <div class="number">$12,876</div>
+                    <div class="indicator">
+                        <i class="bx bx-down-arrow-alt down"></i>
+                        <span class="text">Down from yesterday</span>
+                    </div>
+                </div>
+                <i class="bx bxs-cart-download cart four"></i>
+            </div>
+        </div>
+
+        <div class="sales-boxes">
+            <div class="recent-sales box">
+                <div class="title">Recent Sales</div>
+                <div class="sales-details">
+                    <ul class="details">
+                        <li class="topic">Date</li>
+                        <li><a href="#">02 Jan 2024</a></li>
+                        <li><a href="#">02 Jan 2024</a></li>
+                        <li><a href="#">02 Jan 2024</a></li>
+                        <li><a href="#">02 Jan 2024</a></li>
+                        <li><a href="#">02 Jan 2024</a></li>
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Customer</li>
+                        <li><a href="#">Alex Doe</a></li>
+                        <li><a href="#">David Mart</a></li>
+                        <li><a href="#">Randy Rose</a></li>
+                        <li><a href="#">Steave Waugh</a></li>
+                        <li><a href="#">Alex Doe</a></li>
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Sales</li>
+                        <li><a href="#">Delivered</a></li>
+                        <li><a href="#">Pending</a></li>
+                        <li><a href="#">Returned</a></li>
+                        <li><a href="#">Delivered</a></li>
+                        <li><a href="#">Pending</a></li>
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Total</li>
+                        <li><a href="#">$204.98</a></li>
+                        <li><a href="#">$24.55</a></li>
+                        <li><a href="#">$25.88</a></li>
+                        <li><a href="#">$170.66</a></li>
+                        <li><a href="#">$56.56</a></li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <a href="#">See All</a>
+                </div>
+            </div>
+            <div class="top-sales box">
+                <div class="title">Top Selling Product</div>
+                <ul class="top-sales-details">
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'admin_panel/images/sunglasses.jpg' %}" alt="Sunglasses">
+                            <span class="product">Vuitton Sunglasses</span>
+                        </a>
+                        <span class="price">$1107</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'admin_panel/images/jeans.jpg' %}" alt="Jeans">
+                            <span class="product">Hourglass Jeans</span>
+                        </a>
+                        <span class="price">$1567</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'admin_panel/images/nike.jpg' %}" alt="Nike">
+                            <span class="product">Nike Sport Shoe</span>
+                        </a>
+                        <span class="price">$1234</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'admin_panel/images/scarves.jpg' %}" alt="Scarf">
+                            <span class="product">Hermes Silk Scarves</span>
+                        </a>
+                        <span class="price">$2312</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'admin_panel/images/bag.jpg' %}" alt="Bag">
+                            <span class="product">Succi Ladies Bag</span>
+                        </a>
+                        <span class="price">$1456</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'admin_panel/images/watch.jpg' %}" alt="Watch">
+                            <span class="product">Gucci Wrist Watch</span>
+                        </a>
+                        <span class="price">$1456</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'admin_panel/js/script.js' %}"></script>
+{% endblock %}
