@@ -42,7 +42,9 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "admin_panel" / "static",
+    BASE_DIR / "upload" / "static", 
 ]
+
 
 
 
